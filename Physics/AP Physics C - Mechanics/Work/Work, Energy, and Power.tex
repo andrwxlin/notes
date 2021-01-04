@@ -1,60 +1,6 @@
 \documentclass{article}
-\input{../../../preamble.tex}
-
-\theoremstyle{definition}
-    \newtheorem*{unit}{Unit}
-\surroundwithmdframed[%
-    backgroundcolor=teal!10!white,
-    linecolor=teal,
-    linewidth=2pt,
-    topline=false,
-    rightline=false,
-    bottomline=false,
-    innertopmargin=0]{unit}
-
-\theoremstyle{definition}
-    \newtheorem*{note}{Note}
-\surroundwithmdframed[%
-    backgroundcolor=pink!20!white,
-    linecolor=pink,
-    linewidth=2pt,
-    topline=false,
-    rightline=false,
-    bottomline=false,
-    innertopmargin=0]{note}
-
-\theoremstyle{definition}
-    \newtheorem*{theorem}{Theorem}
-\surroundwithmdframed[%
-    backgroundcolor=lime!15!white,
-    linecolor=lime,
-    linewidth=2pt,
-    topline=false,
-    rightline=false,
-    bottomline=false,
-    innertopmargin=0]{theorem}
-
-\theoremstyle{definition}
-    \newtheorem*{definition}{Definition}
-\surroundwithmdframed[%
-    backgroundcolor=violet!10!white,
-    linecolor=violet,
-    linewidth=2pt,
-    topline=false,
-    rightline=false,
-    bottomline=false,
-    innertopmargin=0]{definition}
-
-\theoremstyle{definition}
-    \newtheorem*{example}{Example}
-\surroundwithmdframed[%
-    backgroundcolor=orange!10!white,
-    linecolor=orange,
-    linewidth=2pt,
-    topline=false,
-    rightline=false,
-    bottomline=false,
-    innertopmargin=0]{example}
+\input{../../../setup/preamble.tex}
+\input{../../../setup/mdframed.tex}
 
 
 \begin{document}
@@ -89,6 +35,7 @@ If \textbf{F} is constant, then it can be removed from the integral, and since $
 \begin{unit}
     The unit of work is the newton-meter (N $\cdot$ m), which is also called a joule (J).
 \end{unit}
+\newpage
 \begin{note}
     Though work depends on two vectors (\textbf{F} and \textbf{r}), work itself is \textit{not} a vector. \\
 This is a result of the dot product, whereby two vectors are multiplied to produce a scalar. Another result of the dot product is that only the component of the force that is parallel (or antiparallel) to the displacement does any work.
@@ -161,7 +108,6 @@ If an object of mass $m$ is raised a height $h$ (which is small enough that $g$ 
     This equation does not depend on the path taken by the object. Thus, gravity is said to be a \textbf{conservative} force.
 \end{note}
 
-\newpage
 \section{Conservation of Mechanical Energy}
 \begin{definition}
     Mechanical energy, denoted by $E$, is the sum of an object's kinetic and potential energies:
@@ -247,7 +193,8 @@ Consider the following potential energy curve:
 \end{center}
 The graph shows how $U$ varies with $x$. A particular value of the total energy, $E = E_{0}$, is also shown.
 Motion of an object whose potential energy is given by $U(x)$ and which has a mechanical energy of $E_{0}$ is confined to the region $-x_{0} \le x \le x_{0}$, because only in this range is $E_{0} \ge U(x)$.
-At each $x$ in this range, the kinetic energy $K = E_{0} - U(x)$ is positive. however, if $x > x_{0}$ (or if $x < -x_{0}$), then $U(x) > E_{0}$, which is physically impossible because the difference, $E_{0} - U(x)$, which should give $K$, is negative. \\
+At each $x$ in this range, the kinetic energy $K = E_{0} - U(x)$ is positive. however, if $x > x_{0}$ (or if $x < -x_{0}$), then $U(x) > E_{0}$, which is physically impossible because the difference, $E_{0} - U(x)$, which should give $K$, is negative.
+
 This particular energy curve with $U(x) = \frac{1}{2}kx^{2}$, describes one of the most important physical systems: a simple harmonic oscillator. The force felt by the oscillator can be recovered from the potential energy curve. 
 Recall that, in the case of $U_{\text{grav}}$, we defined $\Delta U_{\text{grav}}=-W_{\text{by grav}}$.
 In general, $\Delta U = -W$. If we account for a variable force of the form $F = F(x)$, which does the work $W$, then over a small displacement $\Delta x$, we have $\Delta U(x) = -W = -F(x) \Delta x$, so $F(x) = -\frac{\Delta U(x)}{\Delta x}$.
@@ -256,12 +203,44 @@ In the limit as $\Delta x \rightarrow 0$, this last equation becomes:
     F(x) = -\frac{dU}{dx}
 \end{equation*}
 Therefore, in this case, we find $F(x) = -(\frac{d}{dx})(\frac{1}{2}kx^{2}) = -kx$, which specifies a linear restoring force, a prerequisite for simple harmonic motion. 
-This equation, $F(x) = -kx$, is called \textbf{Hooke's law} and is obeyed by ideal springs. \\
+This equation, $F(x) = -kx$, is called \textbf{Hooke's law} and is obeyed by ideal springs.
+
 With this result, we can appreciate the oscillatory nature of the system whose energy curve is sketched above.
-If $x$ is positive (and not greater than $x_{0}$), then $U(x)$ is increasing, so $\frac{dU}{dx}$ is positive, which tells us that  $F$ is negative. 
-So the oscillator feels a force---and an acceleration---in the negative direction, which pulls it back through the origin.
-If $x$ is negative (and not less than $-x_{0}$), then $U(x)$ is decreasing , so $\frac{dU}{dx}$ is negative, which tells us that F is positive.
-So the oscillator feels a force---and an acceleration---in the positive direction, which pushes it back through the origin.
+\begin{itemize}
+    \item If $x$ is positive (and not greater than $x_{0}$), then $U(x)$ is increasing, so $\frac{dU}{dx}$ is positive, therefore $F$ is negative. 
+    So the oscillator feels a force---and an acceleration---in the negative direction, which pulls it back through the origin.
+    \item If $x$ is negative (and not less than $-x_{0}$), then $U(x)$ is decreasing, so $\frac{dU}{dx}$ is negative, therefore $F$ is positive.
+    So the oscillator feels a force---and an acceleration---in the positive direction, which pushes it back through the origin.
+\end{itemize}
+
+Furthermore, the difference between $E_{0}$ and $U$ ($K$) decreases as $x$ approaches $\pm x_{0}$, dropping to zero at these points.
+The fact that $K$ decreases to zero at $\pm x_{0}$ says that the oscillator's speed decreases to zero as it approaches these endpoints.
+It then changes direction and heads back toward the origin---where its kinetic energy and speed are maximized---for another oscillation.
+By looking at the energy curve with these observations in mind, you can almost see the oscillator moving back and forth between the barriers at $x = \pm x_{0}$.
+
+The origin is a point at which $U(x)$ has a minimum, so $F = -\frac{dU}{dx} = 0$ at this point, therefore this is a point of equilibrium.
+If the oscillator is pushed from this equilibrium point in either direction, $F(x)$ will attempt to restore it to $x=0$, so this is a point of \textbf{stable equilibrium}.
+However, a point where the $U(x)$ curve has a maximum is also a point of equilibrium, but it's an \textbf{unstable} one, because if the system were moved from this point in either direction, the force would accelerate it away from the equilibrium position.
 \end{example}
 
+\section{Power}
+\begin{definition}
+    Power is the rate at which work gets done (energy gets transferred).
+    \begin{equation*}
+        \text{Power} = \frac{\text{Work}}{\text{time}} \text{   or   } P=\frac{W}{t}
+    \end{equation*}
+    \begin{equation*}
+        W = \textbf{F} \cdot \textbf{r} \Rightarrow P = \frac{\textbf{F}\cdot \textbf{r}}{t} = \textbf{F} \cdot \textbf{v}
+    \end{equation*}
+    As a derivative:
+    \begin{equation*}
+        P=\frac{dW}{dt}
+    \end{equation*}
+\end{definition}
+\begin{unit}
+    The unit of power is the joule per second (J/s), aka the \textbf{watt} (W). One watt = one joule per second.
+    \begin{note}
+        The W for watt is not italicized, where the $W$ for work is italicized.
+    \end{note}
+\end{unit}
 \end{document}
