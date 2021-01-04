@@ -60,6 +60,7 @@
 \begin{document}
 
 \noindent
+
 \section{Introduction}
 There are different forms of energy because there are different kinds of forces. 
 \begin{itemize}
@@ -182,6 +183,9 @@ which can be solved for $v$, the velocity at position $x$:
 \begin{equation*}
     v=\pm \sqrt{\frac{2}{m}[E-U(x)]} 
 \end{equation*}
+
+\begin{example}    
+
 Consider the following potential energy curve:
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -243,6 +247,21 @@ Consider the following potential energy curve:
 \end{center}
 The graph shows how $U$ varies with $x$. A particular value of the total energy, $E = E_{0}$, is also shown.
 Motion of an object whose potential energy is given by $U(x)$ and which has a mechanical energy of $E_{0}$ is confined to the region $-x_{0} \le x \le x_{0}$, because only in this range is $E_{0} \ge U(x)$.
-At each $x$ in this range, the kinetic energy $K = E_{0} - U(x)$ is positive. however, if $x > x_{0}$ (or if $x < -x_{0}$), then $U(x) > E_{0}$, which is physically impossible because the difference, $E_{0} - U(x)$, which should give $K$, is negative.
+At each $x$ in this range, the kinetic energy $K = E_{0} - U(x)$ is positive. however, if $x > x_{0}$ (or if $x < -x_{0}$), then $U(x) > E_{0}$, which is physically impossible because the difference, $E_{0} - U(x)$, which should give $K$, is negative. \\
+This particular energy curve with $U(x) = \frac{1}{2}kx^{2}$, describes one of the most important physical systems: a simple harmonic oscillator. The force felt by the oscillator can be recovered from the potential energy curve. 
+Recall that, in the case of $U_{\text{grav}}$, we defined $\Delta U_{\text{grav}}=-W_{\text{by grav}}$.
+In general, $\Delta U = -W$. If we account for a variable force of the form $F = F(x)$, which does the work $W$, then over a small displacement $\Delta x$, we have $\Delta U(x) = -W = -F(x) \Delta x$, so $F(x) = -\frac{\Delta U(x)}{\Delta x}$.
+In the limit as $\Delta x \rightarrow 0$, this last equation becomes:
+\begin{equation*}
+    F(x) = -\frac{dU}{dx}
+\end{equation*}
+Therefore, in this case, we find $F(x) = -(\frac{d}{dx})(\frac{1}{2}kx^{2}) = -kx$, which specifies a linear restoring force, a prerequisite for simple harmonic motion. 
+This equation, $F(x) = -kx$, is called \textbf{Hooke's law} and is obeyed by ideal springs. \\
+With this result, we can appreciate the oscillatory nature of the system whose energy curve is sketched above.
+If $x$ is positive (and not greater than $x_{0}$), then $U(x)$ is increasing, so $\frac{dU}{dx}$ is positive, which tells us that  $F$ is negative. 
+So the oscillator feels a force---and an acceleration---in the negative direction, which pulls it back through the origin.
+If $x$ is negative (and not less than $-x_{0}$), then $U(x)$ is decreasing , so $\frac{dU}{dx}$ is negative, which tells us that F is positive.
+So the oscillator feels a force---and an acceleration---in the positive direction, which pushes it back through the origin.
+\end{example}
 
 \end{document}
