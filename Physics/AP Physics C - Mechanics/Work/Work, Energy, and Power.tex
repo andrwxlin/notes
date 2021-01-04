@@ -1,0 +1,77 @@
+\documentclass{article}
+\input{../../../preamble.tex}
+
+\theoremstyle{definition}
+    \newtheorem*{unit}{Unit}
+\surroundwithmdframed[%
+    backgroundcolor=teal!10!white,
+    linecolor=teal,
+    linewidth=2pt,
+    topline=false,
+    rightline=false,
+    bottomline=false,
+    innertopmargin=0]{unit}
+
+\theoremstyle{definition}
+    \newtheorem*{note}{Note}
+\surroundwithmdframed[%
+    backgroundcolor=pink!20!white,
+    linecolor=pink,
+    linewidth=2pt,
+    topline=false,
+    rightline=false,
+    bottomline=false,
+    innertopmargin=0]{note}
+
+\begin{document}
+
+\noindent
+\section{Introduction}
+There are different forms of energy because there are different kinds of forces. 
+\begin{itemize}
+    \item Gravitational energy
+    \item Elastic energy
+    \item Thermal energy
+    \item Radiant energy
+    \item Electrical energy
+    \item Nuclear energy
+    \item Mass energy
+\end{itemize}
+\textbf{Force} is an agent of change, \textbf{energy} is often defined as the ability to do work, and \textbf{work} is one way of transferring energy from one system to another.
+The \textbf{Law of Conservation of Energy} (aka the \textbf{First Law of Thermodynamics}) says that if you account for all its various forms, the total amount of energy in a given process will stay constant (\textit{conserved}).
+
+\section{Work}
+If \textbf{F} is the force, and $d \textbf{\textit{x}}$ is an infinitesimal amount of displacement, then the work done is:
+\begin{equation*}
+    W = \int \textbf{F} \cdot d \textbf{\textit{x}}
+\end{equation*}
+If \textbf{F} is constant, then it can be removed from the integral, and since $\textbf{F} \cdot \textbf{r} = (F\cos\theta)r$ for any angle $\theta$, then $W = (F\cos\theta)r$.
+\begin{unit}
+    The unit of work is the newton-meter (N $\cdot$ m), which is also called a joule (J).
+\end{unit}
+\begin{note}
+    Though work depends on two vectors (\textbf{F} and \textbf{r}), work itself is \textit{not} a vector. \\
+This is a result of the dot product, whereby two vectors are multiplied to produce a scalar. Another result of the dot product is that only the component of the force that is parallel (or antiparallel) to the displacement does any work.
+\end{note}
+\begin{note}
+    Any force or component of a force that is perpendicular to the direction that an object actually moves cannot do work because the displacement in that direction is zero.
+\end{note}
+\begin{note}
+    If a graph of force as a function of position or displacement is given, the work done by the force is the definite integral whose boundaries correspond to the displacement, $\Delta x$.
+\end{note}
+
+\noindent
+\section{Kinetic Energy}
+Consider an object at rest ($v_{0} = 0$) with mass $m$ and a steady force \textbf{F} is being exerted on it, pushing it in a straight line. The object's acceleration is $a = \frac{F_{\text{net}}}{m}$, so after travelling distance $\Delta x$ under the force, its final speed $v$ is:
+\begin{equation*}
+    v^{2} = v_{0}^2 + 2a(x-x_{0})=2a \Delta x = 2 \frac{F_{\text{net}}}{m} \Delta x \rightarrow F_{\text{net}} \Delta x = \frac{1}{2}mv^{2}
+\end{equation*}
+\begin{note}
+    This equation is given by the Big Five \#5.
+\end{note}
+But the quantity $F_{net} \Delta x$ is the \textbf{total work} done by the force, so $W_{r} = \frac{1}{2}mv^{2}$. The work done on the object has transferred energy to it, in the amount $\frac{1}{2}mv^{2}$. \\
+The energy an object possesses by  virtue of its motion is therefore defined as $\frac{1}{2}mv^{2}$ and is called \textbf{kinetic energy}:
+\begin{equation*}
+    K = \frac{1}{2}mv^{2}
+\end{equation*}
+\end{document}

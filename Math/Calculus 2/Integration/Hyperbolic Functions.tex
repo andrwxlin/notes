@@ -1,24 +1,32 @@
-\documentclass[12pt,twoside,letterpaper]{article}
-\usepackage{ucs}
-\usepackage[utf8x]{inputenc}
-\everymath{\displaystyle}
-\usepackage{amsfonts, amsthm, amsmath, amssymb}
-\usepackage{mathtools}
-\usepackage{cancel, textcomp}
-\usepackage[mathscr]{euscript}
-\usepackage[nointegrals]{wasysym}
-\usepackage{physics}
-\usepackage{tikz}
-\usepackage{color}
-\usepackage{microtype}
-\usepackage{geometry}
-\usepackage{booktabs}
-\usepackage{pgfplots, pgfplotstable}
-\usepackage{fancyhdr}
-\usepackage{hyperref}
-\usepackage{paralist}
+\documentclass{article}
+\input{../../../preamble.tex}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth}
+
+
 
 \begin{document}
-this is a test
+
+\section{Standard Hyperbolic Functions}
+
+\subsection{Standard Functions}
+\begin{flalign*}
+    & \int \sinh(ax)dx = \frac{\cosh(ax)}{a}+C\\
+    & \int \cosh(ax)dx = \frac{\sinh(ax)}{a}+C\\
+    & \int \tanh(ax)dx = \frac{\ln|\cosh(ax)|}{a}+C\\
+    & \int \csch(ax)dx = \frac{\ln |\tanh(\frac{ax}{2})|}{a}+C\\
+    & \int \sech (ax)dx = \frac{\arctan(\sinh(ax))}{a} + C\\
+    & \int \coth(ax)dx = \frac{\ln|\sinh(ax)|}{a}+C\\
+\end{flalign*}
+
+\subsection{Inverse functions}
+\begin{flalign*}
+    & \int \arcsin(ax)dx = x \arcsin(ax) + \frac{\sqrt{1-a^2x^2}}{a} + C\\
+\end{flalign*}
+
 
 \end{document}

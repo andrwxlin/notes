@@ -1,0 +1,29 @@
+\documentclass{article}
+\input{../../preamble.tex}
+
+\begin{document}
+\noindent
+A discrete random variable X takes a fixed set of possible values with gaps between. The probability distribution of a discrete random variable X lists the values $x_i$ and their probabilities $p_i$:
+\begin{table}[H]
+\centering
+\begin{tabular}{lcccc}
+    \hline
+    \textbf{Value:} & $x_1$ & $x_2$ & $x_3$ & \ldots\\
+    \textbf{Probability:} & $p_1$ & $p_2$ & $p_3$ & \ldots\\
+    \hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item[--] Mean (expected value)
+\begin{equation*}
+    \mu_X = E(X) = \sum x_i p_i
+\end{equation*}
+    \item[--] Variance of X
+\begin{equation*}
+    \textbf{Var(}X\textbf{)} = \sigma^2_x = \sum (x_i - \mu_x)^2 p_i
+\end{equation*}
+
+\end{itemize}
+
+\end{document}
