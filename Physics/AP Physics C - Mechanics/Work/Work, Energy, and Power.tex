@@ -23,6 +23,40 @@
     bottomline=false,
     innertopmargin=0]{note}
 
+\theoremstyle{definition}
+    \newtheorem*{theorem}{Theorem}
+\surroundwithmdframed[%
+    backgroundcolor=lime!15!white,
+    linecolor=lime,
+    linewidth=2pt,
+    topline=false,
+    rightline=false,
+    bottomline=false,
+    innertopmargin=0]{theorem}
+
+\theoremstyle{definition}
+    \newtheorem*{definition}{Definition}
+\surroundwithmdframed[%
+    backgroundcolor=violet!10!white,
+    linecolor=violet,
+    linewidth=2pt,
+    topline=false,
+    rightline=false,
+    bottomline=false,
+    innertopmargin=0]{definition}
+
+\theoremstyle{definition}
+    \newtheorem*{example}{Example}
+\surroundwithmdframed[%
+    backgroundcolor=orange!10!white,
+    linecolor=orange,
+    linewidth=2pt,
+    topline=false,
+    rightline=false,
+    bottomline=false,
+    innertopmargin=0]{example}
+
+
 \begin{document}
 
 \noindent
@@ -37,10 +71,15 @@ There are different forms of energy because there are different kinds of forces.
     \item Nuclear energy
     \item Mass energy
 \end{itemize}
-\textbf{Force} is an agent of change, \textbf{energy} is often defined as the ability to do work, and \textbf{work} is one way of transferring energy from one system to another.
+\begin{definition}
+    \textbf{Force} is an agent of change, \textbf{energy} is often defined as the ability to do work, and \textbf{work} is one way of transferring energy from one system to another.
+\end{definition}
 The \textbf{Law of Conservation of Energy} (aka the \textbf{First Law of Thermodynamics}) says that if you account for all its various forms, the total amount of energy in a given process will stay constant (\textit{conserved}).
 
 \section{Work}
+\begin{definition}
+    Work is the energy transferred to or from an object via the application of force along a displacement.
+\end{definition}
 If \textbf{F} is the force, and $d \textbf{\textit{x}}$ is an infinitesimal amount of displacement, then the work done is:
 \begin{equation*}
     W = \int \textbf{F} \cdot d \textbf{\textit{x}}
@@ -60,11 +99,13 @@ This is a result of the dot product, whereby two vectors are multiplied to produ
     If a graph of force as a function of position or displacement is given, the work done by the force is the definite integral whose boundaries correspond to the displacement, $\Delta x$.
 \end{note}
 
-\noindent
 \section{Kinetic Energy}
+\begin{definition}
+    Kinetic energy, denoted by $K$, is the energy an object has by virtue of its motion.
+\end{definition}
 Consider an object at rest ($v_{0} = 0$) with mass $m$ and a steady force \textbf{F} is being exerted on it, pushing it in a straight line. The object's acceleration is $a = \frac{F_{\text{net}}}{m}$, so after travelling distance $\Delta x$ under the force, its final speed $v$ is:
 \begin{equation*}
-    v^{2} = v_{0}^2 + 2a(x-x_{0})=2a \Delta x = 2 \frac{F_{\text{net}}}{m} \Delta x \rightarrow F_{\text{net}} \Delta x = \frac{1}{2}mv^{2}
+    v^{2} = v_{0}^2 + 2a(x-x_{0})=2a \Delta x = 2 \frac{F_{\text{net}}}{m} \Delta x \space \Rightarrow \space F_{\text{net}} \Delta x = \frac{1}{2}mv^{2}
 \end{equation*}
 \begin{note}
     This equation is given by the Big Five \#5.
@@ -74,4 +115,134 @@ The energy an object possesses by  virtue of its motion is therefore defined as 
 \begin{equation*}
     K = \frac{1}{2}mv^{2}
 \end{equation*}
+\begin{unit}
+    Kinetic energy is expressed in joules.
+\end{unit}
+\begin{note}
+    Kinetic energy is a scalar quantity.
+\end{note}
+
+\newpage
+\section{The Work-Energy Theorem}
+\begin{theorem}
+    The total work done on an object --- equivalently, the work done by the net force --- will equal its change in kinetic energy:
+    \begin{equation*}
+        W_{\text{total}} = \Delta K
+    \end{equation*}
+    \begin{note}
+        This is the extension of the derivation in Section 3 (Kinetic Energy) to an object with a non-zero initial speed.
+    \end{note}
+\end{theorem}
+
+\section{Potential Energy}
+\begin{definition}
+    Potential energy, denoted by $U$, is the energy an object has by virtue of its position.
+\end{definition}
+\begin{note}
+    Potential energy is independent of motion.
+\end{note}
+Because there are different types of forces, there are different types of potential energy.
+\subsection{Gravitational Potential Energy}
+\begin{definition}
+    Gravitational potential energy, denoted by $U_{\text{grav}}$, is the energy stored by virtue of an object's position in a gravitational field.
+\end{definition}
+\begin{example}
+    Consider a ball with mass $m$ being lifted from the floor to a tabletop of height $h$. The work done by gravity during the ball's ascent was:
+    \begin{equation*}
+        W_{\text{by gravity}} = -F_{w}h = -mgh
+    \end{equation*}
+\end{example}
+If an object of mass $m$ is raised a height $h$ (which is small enough that $g$ stays essentially constant over this height change), then the increase in the object's $U_{\text{grav}}$ is:
+\begin{equation*}
+    \Delta U_{\text{grav}} = mgh
+\end{equation*}
+\begin{note}
+    This equation does not depend on the path taken by the object. Thus, gravity is said to be a \textbf{conservative} force.
+\end{note}
+
+\newpage
+\section{Conservation of Mechanical Energy}
+\begin{definition}
+    Mechanical energy, denoted by $E$, is the sum of an object's kinetic and potential energies:
+    \begin{equation*}
+        E = K + U
+    \end{equation*}
+\end{definition}
+If the net work done by nonconservative forces is zero, the total mechanical energy of an object is conserved:
+\begin{equation*}
+    K_{\text{i}} + U_{\text{i}} = K_{\text{f}} + U_{\text{f}}
+\end{equation*}
+
+\section{Potential Energy Curves}
+The behavior of a system can be analyzed if we are given a graph of its potential energy, $U(x)$, and its mechanical energy, $E$:
+\begin{equation*}
+    K+U=E \Rightarrow \frac{1}{2}mv^{2} + U(x) = E
+\end{equation*}
+which can be solved for $v$, the velocity at position $x$:
+\begin{equation*}
+    v=\pm \sqrt{\frac{2}{m}[E-U(x)]} 
+\end{equation*}
+Consider the following potential energy curve:
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{center}
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Shape: Parabola [id:dp14080636942305502] 
+\draw   (200.5,64) .. controls (276.83,270.67) and (353.17,270.67) .. (429.5,64) ;
+%Straight Lines [id:da9174293443598656] 
+\draw    (314.5,64) -- (314.5,245) ;
+%Straight Lines [id:da22088772388928146] 
+\draw    (423,219) -- (207,219) ;
+%Straight Lines [id:da2675552224540698] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (235,142) -- (396.5,142) ;
+%Straight Lines [id:da5512578120438989] 
+\draw    (293.88,114.11) -- (305.4,134.5) ;
+\draw [shift={(306.88,137.11)}, rotate = 240.52] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Straight Lines [id:da9813364495035721] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (235,142) -- (235,219) ;
+%Straight Lines [id:da015642540703619146] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (396.5,142) -- (396.5,219) ;
+%Shape: Circle [id:dp9251745539061926] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (355.2,197.65) .. controls (355.2,196.46) and (356.16,195.5) .. (357.35,195.5) .. controls (358.54,195.5) and (359.5,196.46) .. (359.5,197.65) .. controls (359.5,198.84) and (358.54,199.8) .. (357.35,199.8) .. controls (356.16,199.8) and (355.2,198.84) .. (355.2,197.65) -- cycle ;
+%Straight Lines [id:da5351318033985861] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (396.5,142) -- (396.5,219) ;
+%Straight Lines [id:da11764239119148434] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (357.5,143) -- (357.5,204) -- (357.5,220) ;
+%Shape: Brace [id:dp5873443370007887] 
+\draw   (363.5,198) .. controls (368.17,198) and (370.5,195.67) .. (370.5,191) -- (370.5,182) .. controls (370.5,175.33) and (372.83,172) .. (377.5,172) .. controls (372.83,172) and (370.5,168.67) .. (370.5,162)(370.5,165) -- (370.5,149) .. controls (370.5,144.33) and (368.17,142) .. (363.5,142) ;
+%Shape: Brace [id:dp3456799289280761] 
+\draw   (363.9,218) .. controls (366.59,218) and (367.94,216.65) .. (367.94,213.96) -- (367.94,213.96) .. controls (367.94,210.12) and (369.28,208.2) .. (371.97,208.2) .. controls (369.28,208.2) and (367.94,206.28) .. (367.94,202.44)(367.94,204.16) -- (367.94,202.44) .. controls (367.94,199.75) and (366.59,198.4) .. (363.9,198.4) ;
+%Straight Lines [id:da5674445004043329] 
+\draw    (427.5,141.43) -- (384.01,169.79) ;
+\draw [shift={(381.5,171.43)}, rotate = 326.89] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Straight Lines [id:da9886442824126032] 
+\draw    (427.5,173.43) -- (379,205.76) ;
+\draw [shift={(376.5,207.43)}, rotate = 326.31] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+
+% Text Node
+\draw (323,58) node [anchor=north west][inner sep=0.75pt]   [align=left] {$E$};
+% Text Node
+\draw (251,93) node [anchor=north west][inner sep=0.75pt]   [align=left] {$E=E_{0}$};
+% Text Node
+\draw (223.5,224) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\mbox{-}x_{0}$};
+% Text Node
+\draw (386.5,222) node [anchor=north west][inner sep=0.75pt]   [align=left] {$x_{0}$};
+% Text Node
+\draw (430.5,214) node [anchor=north west][inner sep=0.75pt]   [align=left] {$x$};
+% Text Node
+\draw (431.5,133) node [anchor=north west][inner sep=0.75pt]   [align=left] {$K$};
+% Text Node
+\draw (431.5,165) node [anchor=north west][inner sep=0.75pt]   [align=left] {$U$};
+
+\end{tikzpicture}
+
+\end{center}
+The graph shows how $U$ varies with $x$. A particular value of the total energy, $E = E_{0}$, is also shown.
+Motion of an object whose potential energy is given by $U(x)$ and which has a mechanical energy of $E_{0}$ is confined to the region $-x_{0} \le x \le x_{0}$, because only in this range is $E_{0} \ge U(x)$.
+At each $x$ in this range, the kinetic energy $K = E_{0} - U(x)$ is positive. however, if $x > x_{0}$ (or if $x < -x_{0}$), then $U(x) > E_{0}$, which is physically impossible because the difference, $E_{0} - U(x)$, which should give $K$, is negative.
+
 \end{document}
