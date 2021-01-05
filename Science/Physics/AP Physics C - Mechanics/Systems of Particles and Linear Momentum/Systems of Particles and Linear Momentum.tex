@@ -1,0 +1,216 @@
+\documentclass{article}
+\input{../../../../setup/preamble.tex}
+\input{../../../../setup/mdframed.tex}
+
+\begin{document}
+
+\begin{note}
+    These were taken from "The Princeton Review AP Physics C Prep 2021". 
+\end{note}
+
+\section{Introduction}
+Originally, Newton expressed his Second Law in words:
+\begin{displayquote}
+    The alteration of motion is...proportional to the...force impressed...
+\end{displayquote}
+By "motion", he meant the product of mass and velocity, a vector quantity known as \textbf{linear momentum}, which is denoted by \textbf{p}:
+\begin{equation*}
+    \textbf{p}=mv
+\end{equation*}
+So the original Second Law read $\Delta \textbf{p} \propto \textbf{F}$, or, equivalently, $\textbf{F} \propto \Delta \textbf{p}$.
+But a large force that acts for a short period of time can produce the same change in linear momentum as a small force acting for a greater period of time. 
+Knowing this, if we take the average force, $\overline{\textbf{F}}$, that acts over the time interval $\Delta t$, the proportion can be expressed as:
+\begin{equation*}
+    \overline{\textbf{F}} = \frac{\Delta \textbf{p}}{\Delta t}
+\end{equation*}
+This equation becomes $\textbf{F} = m\textbf{a}$, since $\frac{\Delta \textbf{p}}{\Delta t}=\frac{\Delta(m\textbf{v})}{\Delta t} = m(\frac{\Delta \textbf{v}}{\Delta t} = m\textbf{a})$ (assuming that $m$ remains constant). If we take the limit as $\Delta t \rightarrow 0$, then the equation above takes the form:
+\begin{equation*}
+    \textbf{F} = \frac{d\textbf{p}}{dt}
+\end{equation*}
+
+\section{Impulse}
+\begin{definition}
+    Impulse, denoted by \textbf{J}, is the product of force and the time during which it acts.
+    \begin{equation*}
+        \textbf{J} = \overline{\textbf{F}}\Delta t
+    \end{equation*}
+\end{definition}
+\begin{note}
+    Impulse is a vector quantity.
+\end{note}
+\begin{theorem}
+    In terms of impulse, Newton's Second Law can be written in yet another form:
+    \begin{equation*}
+        \textbf{J} = \Delta \textbf{p}
+    \end{equation*}
+    Sometimes this is referred to as the \textbf{impulse-momentum theorem}.
+\end{theorem}
+If \textbf{F} varies with time over the interval during which it accts, then the impulse delivered by the force \textbf{F} = \textbf{F}(t) from time $t = t_{1}$ to $t=t_{2}$ is given by the following integral:
+\begin{equation*}
+    \textbf{J} = \int_{t_{1}}^{t_{2}}F(t)dt
+\end{equation*}
+\begin{note}
+    On the equation sheet for the free-response section, this information will be represented as follows:
+    \begin{equation*}
+        \textbf{J} = \int \textbf{F}dt = \Delta \textbf{p}
+    \end{equation*}
+\end{note}
+If a graph of force-versus-time is given, then the impulse of force \textbf{F} as it acts from $t_{1}$ to $t_{2}$ is equal to the area bounded by the graph of \textbf{F}, the $t$-axis, and the vertical lines associated with $t_{1}$ and $t_{2}$ as shown in the following graph.
+
+
+\begin{centering}
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Shape: Axis 2D [id:dp22117085435400452] 
+\draw  (161.7,262.62) -- (498.7,262.62)(195.4,43.2) -- (195.4,287) (491.7,257.62) -- (498.7,262.62) -- (491.7,267.62) (190.4,50.2) -- (195.4,43.2) -- (200.4,50.2)  ;
+%Curve Lines [id:da49325422510936745] 
+\draw    (225.5,212.2) .. controls (309.5,-5.8) and (401.5,296.2) .. (520.5,107.2) ;
+%Straight Lines [id:da08791315840536273] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (276,137) -- (276,268.2) ;
+%Straight Lines [id:da4545311569468673] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (465,164.2) -- (465,262.2) ;
+
+% Text Node
+\draw (191,18) node [anchor=north west][inner sep=0.75pt]   [align=left] {F};
+% Text Node
+\draw (509,255) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle t$};
+% Text Node
+\draw (269,269) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle t_{1}$};
+% Text Node
+\draw (458,269) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle t_{2}$};
+
+
+\end{tikzpicture}
+
+\end{centering}
+\newpage
+\section{Conservation of Linear Momentum}
+According to Newton's Second and Third Law, the impulse delivered to an object is equal to the resulting change in its linear momentum, $\textbf{J} = \Delta \textbf{p}$, the two interacting objects experience equal but opposite momentum changes (assuming that there are no external forces), which implies that the total linear momentum of the system remains constant.
+\begin{law}
+    The \textbf{Law of Conservation of Linear Momentum} states that, in an isolated system, the total linear momentum will remain constant.
+    \begin{equation*}
+        m_{1}\overrightarrow{v}_{1i}+m_{2}\overrightarrow{v}_{2i} = m_{1}\overrightarrow{v}_{1f}+m_{2}\overrightarrow{v}_{2f}
+    \end{equation*} 
+\end{law}
+
+\section{Collisions}
+CoLM is routinely used to analyze \textbf{collisions}. The objects whose collision we will analyze form the \textit{system}, and although the objects exert forces on each other during the impact, these forces are only \textit{internal}. The system's total linear momentum is conserved if there is no net external force on the system.
+
+Collisions are classified into two major categories:
+\begin{itemize}
+    \item A collision is said to be \textbf{elastic} if kinetic energy is conserved. 
+    \begin{example}
+        Most macroscopic collisions are never truly elastic, because there is always a change in energy due to energy transferred as heat, deformation of the objects, and the sound of the impact. However, if the loss of initial kinetic energy is small enough to be ignored, then the collision can be treated as virtually elastic.
+    \end{example}
+    \item A collision is said to be \textbf{inelastic} if the total kinetic energy ids different after the collision.
+    \begin{example}
+        An extreme example is complete inelasticity after the collision. In this case, the objects stick together after the collision and move as one afterward.
+    \end{example}
+\end{itemize}
+In all cases of isolated collisions, Conservation of Linear Momentum states that
+\begin{equation*}
+    \text{total   } \textbf{p}_{\text{before collision}} = \text{total   } \textbf{p}_{\text{after collision}}
+\end{equation*}
+
+\newpage
+\section{Center of Mass}
+\begin{definition}
+    The \textbf{center of mass} is the point where all of the mass of an object can be considered to be concentrated; it's the dot that represents the object of interest in a free-body diagram.
+\end{definition}
+
+For a homogeneous body (that is, one for which the density is uniform throughout), the center of mass is at the geometric center.
+
+If there's a collection of discrete particles, the center of mass of the system can be determined mathematically as follows.
+\begin{enumerate}
+    \item Consider the case where the particles all lie on a straight line ($x$-axis).
+    \item Select some point to be the origin ($x = 0$) and determine the positions of each particle on the axis.
+    \item Multiply each position value by the mass of the particle at that location, and get the sum for all the particles.
+    \item Divide this sum by the total mass, and the resulting $x$-value is the center of mass.
+\end{enumerate} 
+\begin{equation*}
+    x_{\text{cm}} = \frac{m_{1}x_{1}+m_{2}x_{2}+\dots+m_{n}x_{n}}{m_{1}+m_{2}+\dots+m_{n}}
+\end{equation*}
+\begin{note}
+    On the Table of Information, this information will be represented as follows:
+    \begin{equation}
+        \textbf{r}_{\text{cm}} = \sum m\textbf{r} / \sum m
+    \end{equation}
+    
+    More on next page...
+\begin{centering}
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,325); %set diagram left start at 0, and has height of 325
+
+%Straight Lines [id:da5426561632623741] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (162,25) -- (398.1,25) ;
+\draw [shift={(401.1,25)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+\draw [shift={(159,25)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Straight Lines [id:da8814836886498862] 
+\draw    (332,10.2) -- (332,41.2) ;
+%Straight Lines [id:da8322904282820234] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (332,68.7) -- (502,68.7) ;
+\draw [shift={(505,68.7)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Straight Lines [id:da8701940113526481] 
+\draw    (107.1,129) -- (558.1,129) ;
+%Straight Lines [id:da8974932344629829] 
+\draw    (332.6,129) -- (332.6,144.5) ;
+%Shape: Circle [id:dp6047547467232344] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (144.1,129) .. controls (144.1,120.77) and (150.77,114.1) .. (159,114.1) .. controls (167.23,114.1) and (173.9,120.77) .. (173.9,129) .. controls (173.9,137.23) and (167.23,143.9) .. (159,143.9) .. controls (150.77,143.9) and (144.1,137.23) .. (144.1,129) -- cycle ;
+%Shape: Circle [id:dp3267361448882713] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (386.2,129) .. controls (386.2,120.77) and (392.87,114.1) .. (401.1,114.1) .. controls (409.33,114.1) and (416,120.77) .. (416,129) .. controls (416,137.23) and (409.33,143.9) .. (401.1,143.9) .. controls (392.87,143.9) and (386.2,137.23) .. (386.2,129) -- cycle ;
+%Shape: Circle [id:dp6360995658525717] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (490.1,128.7) .. controls (490.1,120.47) and (496.77,113.8) .. (505,113.8) .. controls (513.23,113.8) and (519.9,120.47) .. (519.9,128.7) .. controls (519.9,136.93) and (513.23,143.6) .. (505,143.6) .. controls (496.77,143.6) and (490.1,136.93) .. (490.1,128.7) -- cycle ;
+%Shape: Brace [id:dp6397791851506576] 
+\draw   (162.1,172) .. controls (162.1,176.67) and (164.43,179) .. (169.1,179) -- (322.6,179) .. controls (329.27,179) and (332.6,181.33) .. (332.6,186) .. controls (332.6,181.33) and (335.93,179) .. (342.6,179)(339.6,179) -- (496.1,179) .. controls (500.77,179) and (503.1,176.67) .. (503.1,172) ;
+%Straight Lines [id:da21164965808685654] 
+\draw    (107.1,275) -- (558.1,275) ;
+%Straight Lines [id:da07814713838909726] 
+\draw    (332.6,275) -- (332.6,290.5) ;
+%Straight Lines [id:da05161983015131866] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (278.1,252) -- (332.6,252) ;
+\draw [shift={(275.1,252)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Shape: Circle [id:dp4564545373138047] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (260.2,275) .. controls (260.2,266.77) and (266.87,260.1) .. (275.1,260.1) .. controls (283.33,260.1) and (290,266.77) .. (290,275) .. controls (290,283.23) and (283.33,289.9) .. (275.1,289.9) .. controls (266.87,289.9) and (260.2,283.23) .. (260.2,275) -- cycle ;
+
+% Text Node
+\draw (239,31) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x_{1}$};
+% Text Node
+\draw (355,31) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x_{2}$};
+% Text Node
+\draw (411,77) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x_{3}$};
+% Text Node
+\draw (148,152) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle m_{1}$};
+% Text Node
+\draw (390,152) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle m_{2}$};
+% Text Node
+\draw (493,152) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle m_{3}$};
+% Text Node
+\draw (327,153) node [anchor=north west][inner sep=0.75pt]   [align=left] {0};
+% Text Node
+\draw (280,186) node [anchor=north west][inner sep=0.75pt]   [align=left] {is equivalent to:};
+% Text Node
+\draw (327,299) node [anchor=north west][inner sep=0.75pt]   [align=left] {0};
+% Text Node
+\draw (297,230) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x_{\text{cm}}$};
+% Text Node
+\draw (567,121) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
+% Text Node
+\draw (568,267) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
+% Text Node
+\draw (266,298) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle M$};
+
+
+\end{tikzpicture}
+
+\end{centering}
+
+\end{note}
+
+\end{document}
