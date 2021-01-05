@@ -3,8 +3,11 @@ this is my running repo for notes that i take
 ## Introduction
 after a typical highschool sleepless night, i had a shitty idea:
 > "what if i, instead of preparing for my important standardized exam coming up tomorrow, started typing notes in LaTeX?"
+
 and so i, a stressed and tired high school student, decided to start making my notes in LaTeX so that i could prepare myself for the onslaught that is secondary education. thus began my obsession with pleasingly formatted notes. then i was like:
+
 > "hey i'm already doing all this work to make these cool notes, what if i let my friends use them too?"
+
 so now it's on this github :D
 
 ## Usage
