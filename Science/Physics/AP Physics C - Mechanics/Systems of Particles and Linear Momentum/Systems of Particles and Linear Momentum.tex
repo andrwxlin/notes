@@ -134,13 +134,37 @@ If there's a collection of discrete particles, the center of mass of the system 
 \begin{equation*}
     x_{\text{cm}} = \frac{m_{1}x_{1}+m_{2}x_{2}+\dots+m_{n}x_{n}}{m_{1}+m_{2}+\dots+m_{n}}
 \end{equation*}
+
+The system of particles behaves in many respects as if all its mass, $M = m_{1} + m_{2} + \dots + m_{n}$, were concentrated at a single location, $x_{\text{cm}}$.
+
+If the system consists of objects that are not confined to the same straight line, use the $x_{\text{cm}}$ equation to find their center of mass, and this equation
+\begin{equation*}
+    y_{\text{cm}} = \frac{m_{1}y_{1}+m_{2}y_{2}+\dots+m_{n}y_{n}}{m_{1}+m_{2}+\dots+m_{n}}
+\end{equation*}
+to find the y-coordinate of their center of mass.
+
+From the equation
+\begin{equation*}
+    x_{\text{cm}} = \frac{m_{1}x_{1}+m_{2}x_{2}+\dots+m_{n}x_{n}}{M}
+\end{equation*}
+we can derive
+\begin{equation*}
+    Mv_{\text{cm}} = m_{1}v_{1}+m_{2}v_{2}+\dots+m_{n}v_{n}
+\end{equation*}
+
+So, the total linear momentum of all the particles in the system is the same as $Mv_{\text{cm}}$, the linear momentum of a single particle (whose mass is equal to the system's total mass) moving with the velocity of the center of mass.
+
+Differentiating again establishes the following:
+\begin{equation*}
+    F_{\text{net}}=M\textbf{a}_{\text{cm}}
+\end{equation*}
+This states that if the net external force on the system is zero, then the center of mass will not accelerate.
 \begin{note}
     On the Table of Information, this information will be represented as follows:
-    \begin{equation}
+    \begin{equation*}
         \textbf{r}_{\text{cm}} = \sum m\textbf{r} / \sum m
-    \end{equation}
-    
-    More on next page...
+    \end{equation*}
+
 \begin{centering}
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -206,11 +230,12 @@ If there's a collection of discrete particles, the center of mass of the system 
 % Text Node
 \draw (266,298) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle M$};
 
-
 \end{tikzpicture}
 
 \end{centering}
 
 \end{note}
+
+
 
 \end{document}
