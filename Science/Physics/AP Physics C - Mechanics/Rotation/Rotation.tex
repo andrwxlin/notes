@@ -1,0 +1,122 @@
+\documentclass{article}
+\input{../../../../setup/preamble.tex}
+\input{../../../../setup/mdframed.tex}
+
+\begin{document}
+
+\begin{note}
+    These were taken from "The Princeton Review AP Physics C Prep 2021". 
+\end{note}
+
+\section{Introduction}
+All motion is some combination of \textbf{translation} and \textbf{rotation}.
+
+\section{Rotational Kinematic}
+Mark several dots along a radius on a disk, and call this radius the \textit{reference line}. If the disk rotates about its center, the movement of these dots can represent angular displacement, angular velocity, and angular acceleration.
+
+If the disk rotates as a rigid body, then all dots have the same \textbf{angular displacement}, $\Delta \theta$.
+\begin{definition}
+    A body is considered a \textbf{rigid body} when all points along a radial line always have the same angular displacement.
+\end{definition}
+
+\begin{definition}
+    The time rate-of-change of angular displacement gives \textbf{angular velocity}, denoted by $\omega$.
+    
+    Average angular acceleration:
+    \begin{equation*}
+        \overline{\omega} = \frac{\Delta \theta}{\Delta t}
+    \end{equation*}
+    Instantaneous angular acceleration ($\Delta t \rightarrow 0$): 
+    \begin{equation*}
+        \omega = \frac{d\theta}{dt}
+    \end{equation*}
+\end{definition}
+
+\begin{definition}
+    The time rate-of-change of angular velocity gives \textbf{angular acceleration}, denoted by $\alpha$.
+
+    Average angular acceleration:
+    \begin{equation*}
+        \overline{\alpha} = \frac{\Delta \omega}{\Delta t}
+    \end{equation*}
+    Instantaneous angular acceleration:
+    \begin{equation*}
+        \alpha = \frac{d\omega}{dt}
+    \end{equation*}
+\end{definition}
+
+In the above scenario, all points undergo the same angular displacement in any given time interval; this means that all points on the disk have the same angular velocity, $\omega$, but not all points have the same linear velocity, $v$.
+This follows the definition of the \textbf{radian} measure. In radians, the angular displacement, $\Delta \theta$, is related to the arc length, $\Delta s$, by the equation
+\begin{equation*}
+    \Delta \theta = \frac{\Delta s}{r}
+\end{equation*}
+Rearranging this equation and dividing by $\Delta t$
+\begin{alignat*}{2}
+    \Delta s = r \Delta \theta &\quad \Rightarrow \quad \frac{\Delta s}{\Delta t} = r\frac{\Delta \theta}{\Delta t} &&\quad \Rightarrow \quad \overline{v} = r \overline{\omega} \\
+    ds = rd\theta &\quad \Rightarrow \quad \frac{ds}{dt} = r \frac{d\theta}{dt} &&\quad \Rightarrow \quad v=r\omega
+\end{alignat*}
+
+Therefore, the greater the value of $r$, the greater the value of $v$. Points on the rotating body farther from the rotation axis move more quickly than those closer to the rotation axis.
+
+From the equation $v = r\omega$, one can derive the relationship that connects angular acceleration and linear acceleration. Differentiating both sides with respect to $t$ (holding $r$ constant), gives
+\begin{equation*}
+    \frac{dv}{dt} = r \frac{d\omega}{dt} \quad \Rightarrow \quad a=r\alpha
+\end{equation*}
+\begin{note}
+    The acceleration $a$ in this equation is \textit{not} centripetal acceleration; it's tangential acceleration, which arises from a change in sped caused by an angular acceleration. By contrast, centripetal acceleration does not produce a change in speed.
+
+    Often, tangential acceleration is denoted as $a_{t}$ and centripetal acceleration as $a_{c}$.
+\end{note}
+\begin{note}
+    One can derive an expression for centripetal acceleration in terms of angular speed.
+    \begin{equation*}
+        a_{c} = \frac{v^{2}}{r} = \frac{(r\omega)^{2}}{r}=\omega^{2}r
+    \end{equation*}
+    This will be expressed on the equation sheet for the free-response section as
+    \begin{equation*}
+        a_{c} = \frac{v^{2}}{r}=\omega^{2}r
+    \end{equation*}
+\end{note}
+
+\newpage
+\section{The Big Five For Rotational Motion}
+
+\begin{table}[!hbt]
+    \begin{center}
+      \setlength{\tabcolsep}{15pt}
+      \renewcommand{\arraystretch}{1.5}
+      \begin{tabular}{l l r}
+        \multicolumn{3}{r}{\textit{Missing variable}} \\
+        {Big Five \#1:} & $\Delta\theta = \overline{\omega}t$ & $\alpha$ \\
+        {Big Five \#2:} & $\omega = \omega_{0} + \alpha{t}$ & $\Delta\theta$ \\
+        {Big Five \#3:} & $\theta = \theta_{0} + \omega_{0}t + \frac{1}{2}\alpha{t}^{2}$ & $\omega$ \\
+        {Big Five \#4:} & $\Delta\theta = \omega{t} - \frac{1}{2}\alpha(t)^{2}$ & $ \omega_{0}$ \\
+        {Big Five \#5:} & $\omega^{2} = \omega_{0}^{2} + 2\alpha{\Delta}\theta$ & $t$ \\
+    \end{tabular}
+  \end{center} 
+\end{table}
+
+\begin{note}
+    In Big Five \#1, because angular acceleration is constant, the average angular velocity is the average of the initial and the final angular velocity: $\overline{\omega} = \frac{1}{2}(\omega_{0}+\omega)$. 
+    Also, if $t_{i} = 0$, then $\Delta t = t_{f} - t_{i} = t - 0 = t$, so $t$ can be written instead of $\Delta t$ in the first four equations.
+\end{note}
+
+\begin{table}[!hbt]
+    \begin{center}
+        \setlength{\tabcolsep}{15pt}
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{l c c c}
+            & \textit{Translational} & \textit{Rotational} & \textit{Connection}\\
+            {displacement:} & $\Delta x$ & $\Delta \theta$ & $\Delta x = r \Delta \theta$ \\
+            {velocity:} & $v$ & $\omega$ & $v=r\omega$ \\
+            {acceleration:} & $a$ & $\alpha$ & $a=r\alpha$ \\
+            {Big Five \#1:} & $\Delta x = x - x_{0} = \overline{v}t$ & $\Delta\theta = \overline{\omega}t$ & \\
+            {Big Five \#2:} & $v=v_{0}+at$ & $\omega=\omega_{0}+\alpha t$ & \\
+            {Big Five \#3:} & $x=x_{0}+v_{0}t+\frac{1}{2}at^{2}$ & $\Delta\theta=\omega_{0}t+\frac{1}{2}\alpha t^{2}$ & \\
+            {Big Five \#4:} & $x=x_{0}+vt-\frac{1}{2}at^{2}$ & $\Delta\theta=\omega t-\frac{1}{2}\alpha t^{2}$ & \\
+            {Big Five \#5:} & $v^{2}=v^{2}_{0}+2a(x-x_{0})$ & $\omega^{2}=\omega_{0}^2+2\alpha\Delta\theta$ & \\
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\end{document}
