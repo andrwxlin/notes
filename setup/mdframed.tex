@@ -76,3 +76,39 @@
     hidealllines=true,
     innertopmargin=.6\baselineskip,
     innerbottommargin=.6\baselineskip]{solution}
+
+\theoremstyle{definition}
+    \newtheorem*{inprogress}{Status}
+\surroundwithmdframed[%
+    backgroundcolor=yellow!20!white,
+    linecolor=yellow,
+    linewidth=2pt,
+    topline=false,
+    rightline=false,
+    bottomline=false,
+    innertopmargin=.6\baselineskip,
+    innerbottommargin=.6\baselineskip]{inprogress}
+
+\theoremstyle{definition}
+    \newtheorem*{finished}{Status}
+\surroundwithmdframed[%
+    backgroundcolor=green!20!white,
+    linecolor=green,
+    linewidth=2pt,
+    topline=false,
+    rightline=false,
+    bottomline=false,
+    innertopmargin=.6\baselineskip,
+    innerbottommargin=.6\baselineskip]{finished}
+
+\theoremstyle{definition}
+    \newtheorem*{dropped}{Status}
+\surroundwithmdframed[%
+    backgroundcolor=red!20!white,
+    linecolor=red,
+    linewidth=2pt,
+    topline=false,
+    rightline=false,
+    bottomline=false,
+    innertopmargin=.6\baselineskip,
+    innerbottommargin=.6\baselineskip]{dropped}
